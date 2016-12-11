@@ -13,7 +13,15 @@ class Tax
 {
     public static function getTaxRate()
     {
-        $array = array('27','10');
+        return (string)self::getARandomTaxRate([27, 10]);
+    }
+
+    /**
+     * @param $array
+     * @return mixed
+     */
+    public function getARandomTaxRate($array)
+    {
         shuffle($array);
         return $array[0];
     }
